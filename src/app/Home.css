@@ -1,0 +1,359 @@
+
+.contactsPanel {
+    grid-column: 1;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    row-gap: clamp(10px, 1vw, 100px);
+    background-color: #212121;
+    border-radius: clamp(10px, 1vw, 50px);
+    height: 100%;
+    padding: clamp(5px, 1vw, 60px);
+}
+
+
+.searchBlock {
+    display: flex;
+    gap: clamp(2px, .4vw, 50px);
+    height: min-content;
+    align-items: center;
+}
+
+.phoneNumber,
+.apiToken,
+.idInstanse,
+.search {
+    border: none;
+    width: 100%;
+    border-radius: clamp(10px, 1vw, 100px);
+    background-color: #181818;
+    outline: none;
+    padding-block: clamp(2px, .4vw, 100px);
+    padding-inline: clamp(2px, .8vw, 100px);
+    color: #FFFFFF;
+    font-size: clamp(10px, 1vw, 100px);
+}
+
+.phoneNumber,
+.apiToken,
+.idInstanse {
+    border: .1vw solid #707579;
+}
+
+.search::placeholder {
+    color: #707579;
+    font-size: clamp(10px, 1vw, 100px);
+}
+
+
+.personImgCircle,
+.personImg {
+    border-radius: 50%;
+    background-color: #707579;
+    padding: clamp(5px, .4vw, 50px);
+    width: clamp(15px, 2vw, 20vw);
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.personImg:hover {
+    background-color: #4c4f52;
+}
+
+.personImgCircle {
+    background-color: #0f7be0;
+}
+
+
+.contact {
+    display: grid;
+    justify-content: center;
+}
+
+.submittingForm,
+.addContact {
+    height: min-content;
+    padding-inline: clamp(5px, 1vw, 100px);
+    padding-block: clamp(2px, .4vw, 100px);
+    border: none;
+    background-color: #509EE6;
+    color: #FFFFFF;
+    font-size: clamp(10px, 1vw, 100px);
+    border-radius: clamp(10px, 1vw, 100px);
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.submittingForm:hover,
+.addContact:hover {
+    background-color: #0f7be0;
+}
+
+
+.Overley {
+    inset: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    background: #1818186a;
+    backdrop-filter: blur(.1vw);
+}
+
+.modalWindow {
+    background-color: #181818;
+    border-radius: clamp(10px, 1vw, 10vw);
+    padding: clamp(10px, .8vw, 100px);
+    display: grid;
+    grid-row-gap: clamp(5px, 1vw, 100px);
+}
+
+.headerModal {
+    display: flex;
+    justify-content: space-between;
+    gap: clamp(5px, .6vw, 100px);
+    font-size: clamp(12px, .8vw, 100px);
+    color: #FFFFFF;
+}
+
+.description {
+    color: #707579;
+    font-size: clamp(10px, 1vw, 100px);
+}
+
+.description span {
+    color: #1DC37E;
+}
+
+.FormAddContact,
+.formRegistration {
+    display: grid;
+    grid-row-gap: clamp(5px, 1vw, 100px);
+}
+
+.close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: clamp(5px, .6vw, 50px);
+    padding: clamp(5px, .4vw, 50px);
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.close img {
+    width: clamp(15px, 1.2vw, 10vw);
+}
+
+.close:hover {
+    background-color: #4c4f526e;
+}
+
+
+.Chats {
+    display: flex;
+    flex-direction: column;
+    align-content: start;
+    gap: clamp(5px, .4vw, 100px);
+    padding-inline: clamp(5px, .8vw, 100px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-height: 0;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.chatItem {
+    display: grid;
+    padding: clamp(5px, .6vw, 100px);
+    grid-template-columns: min-content auto;
+    align-items: center;
+    column-gap: clamp(5px, .6vw, 100px);
+    height: min-content;
+    cursor: pointer;
+    border-radius: clamp(10px, .8vw, 100px);
+    transition: all .3s ease;
+}
+
+.chatItem:hover {
+    background-color: #70757953;
+}
+
+.Avatar {
+    padding: .1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 1 / 3;
+    grid-column: 1;
+    background-color: #0f7be0;
+    border-radius: 50%;
+    width: clamp(20px, 2.6vw, 10vw);
+    aspect-ratio: 1;
+}
+
+.Avatar p {
+    font-size: clamp(10px, 1vw, 100px);
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.nameContact,
+.NameContact {
+    font-size: clamp(10px, 1.1vw, 100px);
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.lastMessage {
+    font-size: clamp(8px, .9vw, 100px);
+    font-weight: 600;
+    color: #707579;
+}
+
+.nameContact {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+
+.chatWindow {
+    flex: 1;
+    margin-inline: clamp(10px, 13vw, 30vw);
+    backdrop-filter: blur(.2vw);
+    border-radius: clamp(10px, 1vw, 10vw);
+    padding: clamp(10px, .8vw, 100px);
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+}
+
+.chatHeader {
+    background-color: #181818;
+    border-radius: clamp(10px, 1vw, 100px);
+    padding: clamp(5px, .4vw, 100px);
+    display: flex;
+    align-items: center;
+    gap: clamp(5px, .6vw, 100px);
+}
+
+.closeChat {
+    cursor: pointer;
+    width: clamp(10px, 1.5vw, 10vw);
+    margin-right: .5vw;
+}
+
+
+.messageForm {
+    background-color: #181818;
+    display: flex;
+    align-items: center;
+    border-radius: clamp(10px, 2.5vw, 10vw);
+    padding: clamp(5px, .4vw, 100px);
+    gap: clamp(2px, .4vw, 50px);
+}
+
+.mic img,
+.emogi,
+.file {
+    width: clamp(10px, 1.6vw, 300px);
+    cursor: pointer;
+}
+
+.file {
+    margin-left: .2vw;
+}
+
+.messageInput {
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    color: #FFFFFF;
+    font-size: clamp(10px, 1vw, 100px);
+}
+
+.mic {
+    border: none;
+    border-radius: clamp(10px, 2.5vw, 10vw);
+    padding-inline: clamp(2px, .5vw, 50px);
+    padding-block: clamp(2px, .3vw, 50px);
+    background-color: #8774E1;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.close,
+.deleteChat,
+.mic {
+    transition: all .3s ease;
+}
+
+.mic:hover {
+    background-color: #6255a4;
+}
+
+.deleteChat {
+    border: none;
+    background-color: #b20505;
+    padding-inline: clamp(2px, .5vw, 50px);
+    padding-block: clamp(2px, .4vw, 50px);
+    border-radius: clamp(2px, .6vw, 50px);
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.deleteChat:hover {
+    background-color: #870404;
+}
+
+.deleteChat img {
+    width: clamp(10px, 1.3vw, 100px);
+}
+
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    padding-top: .2vw;
+    gap: clamp(4px, .4vw, 30px);
+    align-content: start;
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-height: 0;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.messages::-webkit-scrollbar {
+    width: 0;
+}
+
+.bubble.mine,
+.bubble {
+    background-color: #212121;
+    width: min-content;
+    padding: clamp(5px, .4vw, 100px);
+    border-radius: clamp(2px, .4vw, 50px);
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: clamp(10px, 1.1vw, 100px);
+}
+
+.bubble.mine {
+    background-color: #8774E1;
+    margin-left: auto;
+}
+
+.noChatSelected {
+    margin: auto;
+    padding: clamp(5px, .8vw, 100px);
+    background-color: #212121;
+    color: #FFFFFF;
+    border-radius: clamp(2px, .6vw, 50px);
+    display: grid;
+    gap: .4vw;
+    font-size: clamp(10px, 1vw, 100px);
+}
