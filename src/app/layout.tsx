@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Тестовое задание на должность Фронтенд разработчик на React",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="ru">
       <body>{children}</body>
